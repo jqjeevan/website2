@@ -14,7 +14,7 @@
             <img src="images/logo.png" class="logo">
 
             <nav>
-                <ul>
+                <ul id="menuList">
                     <li><a href="">Model S</a></li>
                     <li><a href="">Model 3</a></li>
                     <li><a href="">Model X</a></li>
@@ -22,22 +22,54 @@
                 </ul>
             </nav>
 
-            <img src="images/menubutton.png" class="menu-icon">
+            <img src="images/menubutton.png" class="menu-icon" onclick="togglemenu()">
         </div>
 
         <div class="row">
-            <div class="col-1">
+
+            <div class="col1">
                 <h2>Tesla<br>Model S</h2>
                 <h3>Beyond Ludacris</h3>
                 <p>Plaid Powertrain</p>
-                <h3>$178,590</h3>
+                <h4>$178,590</h4>
+                <button type="button">ORDER NOW<img src="images/arrow.png"></button>
             </div>
-            <div class="col-2">
 
+            <div class="col2">
+                <img src="images/models.png" class="models">
+                <div class="color-box"></div>
+                <div class="add-wish">
+                    <img src="images/add-to-wishlist.webp">
+                    <p><small>Add to Cart</small></p>
+                </div>
             </div>
+
+        </div>
+
+        <div class="socials">
+            <img src="images/fb-icon.png">
+            <img src="images/tw-icon.png">
+            <img src="images/ig-icon.png">
         </div>
 
     </div>
 
 </body>
+
+    <script>
+
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxheight = "0px";
+
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px"
+            }
+            else {
+                menuList.style.maxHeight = "0px"
+            }
+        }
+
+    </script>
+
 </html>
